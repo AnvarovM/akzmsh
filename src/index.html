@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Anvarov - Experiment</title>
+
+    <meta itemprop="name" content="Anvarov - Experiment" />
+    <meta
+      itemprop="description"
+      content="Creative WebGL experiment with Three.js"
+    />
+    <meta
+      itemprop="image"
+      content="https://experiment-holographic-terrain.vercel.app/social/share-1200x630.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anvarov - Experiment" />
+    <meta
+      name="twitter:description"
+      content="Creative WebGL experiment with Three.js"
+    />
+    <meta
+      name="twitter:image"
+      content="https://experiment-holographic-terrain.vercel.app/social/share-1200x630.png"
+    />
+
+    <meta property="og:site_name" content="Anvarov - Experiment" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://experiment-holographic-terrain.vercel.app"
+    />
+    <meta property="og:title" content="Anvarov - Experiment" />
+    <meta
+      property="og:description"
+      content="Creative WebGL experiment with Three.js"
+    />
+    <meta
+      property="og:image"
+      content="https://experiment-holographic-terrain.vercel.app/social/share-1200x630.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="animation-logo">Anvarov</h1>
+      <div class="animation-wrapper"></div>
+      <canvas class="webgl"></canvas>
+      <div class="title" contenteditable="" spellcheck="false">
+        Frontend dev.
+      </div>
+      <nav>
+        <div class="menu">
+          <div class="bar bar-0"></div>
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+        </div>
+      </nav>
+    </header>
+    <div class="progressbar"></div>
+ 
+    <div class="main-container">
+      <div class="container">
+        <div class="text">
+          <div class="ticker-reel" id="ticker">
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+            <div class="reel-item">&nbsp; - Welcome to my personal website</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+      <h1>teat</h1>
+    </div>
+
+    <script>
+      let scroll = window.scrollY / 1.5;
+      const updateScroll = () => {
+        scroll = window.scrollY / 1.5;
+        document.getElementById("ticker").style.transform =
+          "translateX(-" + scroll + "px)";
+      };
+      setInterval(updateScroll, 1);
+      const tl = gsap.timeline();
+      tl.to(".animation-logo", {
+        fontSize: "30px",
+        position: "fixed",
+        top: "20px",
+        left: "20px",
+        duration: 3,
+        delay: 2,
+      });
+      tl.to(".animation-wrapper", {
+        opacity: 0,
+        display: "none",
+        duration: 1,
+        stagger: 0.25,
+      });
+      tl.to(".title", {
+        opacity: 1,
+        duration: 1,
+        stagger: 0.25,
+      });
+
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop(),
+          dh = $(document).height(),
+          wh = $(window).height();
+        scrollPercent = (scroll / (dh - wh)) * 100;
+        $(".progressbar").css("height", scrollPercent + "%");
+      });
+    </script>
+  </body>
+</html>

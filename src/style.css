@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Ailerons";
+  src: url("./fonts/subset-Ailerons-Regular.woff2") format("woff2"),
+    url("./fonts/subset-Ailerons-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #08031c;
+  color: #ffffff;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+*::selection {
+  color: #aaaaaa;
+  background: #ffffff22;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+}
+
+.animation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #080024;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+
+section {
+  z-index: 1000;
+}
+
+.animation-logo {
+  position: fixed;
+  top: 44%;
+  left: 44%;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Ailerons", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.title {
+  position: absolute;
+  top: calc(50% - 14vmin / 2);
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  font-size: 10vmin;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  font-family: "Ailerons", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.menu .bar {
+  width: 80%;
+  height: 2px;
+  margin-bottom: 6px;
+  background: #ffffff;
+}
+
+.credits {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #ffffff;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  margin: 2rem 0;
+}
+.text {
+  width: 100%;
+  overflow-x: hidden;
+}
+.ticker-reel {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  will-change: transform;
+}
+.reel-item {
+  color: #ffffff;
+  font-family: "Ailerons", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+/*  */
+
+.progressbar {
+  position: fixed;
+  top: 0;
+  right: 80px;
+  background: rgba(255, 255, 255, 0.4);
+  width: 1px;
+}
